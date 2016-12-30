@@ -1,0 +1,17 @@
+Ques . What is WebServers? Why it is used?
+Ans. Transaction with HTTP request and HTTP response is called webserver.
+Using the internet listening the HTTP request and providing the HTTP response is also called webserver.
+It gives only html output.It will not process business logic .They can provide Http server.They are static.
+
+
+What is different between webserver and application server?
+Ans. The basic difference between a web server and an 
+application server is Webserver can execute only web applications i,e servlets and JSPs and has only a single container known as Web container which is used to interpret/execute web 
+applications.
+Application server can execute Enterprise application, i,e (servlets, jsps, and EJBs) it is having two containers 
+1. Web Container(for interpreting/executing servlets and jsps) 
+2. EJB container(for executing EJBs). it can perform operations like load balancing , transaction demarcation etc.
+
+How server servlet container serves multiple request for same resouces
+Ans.	using the multithreaded model - it creates new thread for new request object - servlet is initialized either to 
+		the first request or if explicitly mentioned in the servlet config

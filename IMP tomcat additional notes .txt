@@ -1,0 +1,24 @@
+TOMCAT capabilities
+					
+		1.  cluster node and load balancing - server.xml
+		2.	J2EE Datasource with tomcat
+			- 	context.xml  - define DS params
+			- 	JDBC jar in common/lib folder.
+			- 	Create META-INF/context.xml In the root of your Applications
+			-	access the J2EE datasource in you application using the servlet to db connection
+				InitialContext ic = new InitialContext(); 
+				DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/WallyDB"); 
+				Connection c = ds.getConnection(); 
+				... 
+				c.close(); 
+		3.	Tomcat
+			-	servelt container
+			-	webserver
+			-	standlone and httpd 
+			-	can server static or dynamic - servlets / jsps /html
+			
+		4.	JSPER 	-	tomcats jsp engine - compile jsp to java servlet - auto-detect changes and compile and reload
+		
+		5.	Tomcat's servlet container - Servlet containers are also referred to as web containers or web engines.
+			-	basic functionality of web server , each servlet registered with to execution n mapping
+			-	dynamic addition n removal of servlet without affecting running app servlets	
